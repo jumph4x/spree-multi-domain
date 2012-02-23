@@ -1,4 +1,4 @@
-class Admin::StoresController < Admin::BaseController
+class Spree::Admin::StoresController < Spree::Admin::BaseController
   resource_controller
   ssl_required
 

@@ -1,4 +1,4 @@
-class Store < ActiveRecord::Base
+class Spree::Store < ActiveRecord::Base
   has_and_belongs_to_many :products
   has_many :taxonomies
   has_many :orders
@@ -9,7 +9,7 @@ class Store < ActiveRecord::Base
   scope :by_domain, lambda { |domain| where("domains like ?", "%#{domain}%") }
   
   def self.current(domain = nil)
-    current_store = domain ? Store.by_domain(domain).first : nil
-    current_store || Store.default.first
+    current_store = domain ? Spree::Store.by_domain(domain).first : nil
+    current_store || Spree::Store.default.first
   end
 end

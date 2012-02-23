@@ -1,4 +1,4 @@
-Admin::ProductsController.class_eval do
+Spree::Admin::ProductsController.class_eval do
   update.before :set_stores
 
   create.before :add_to_all_stores
