@@ -11,6 +11,7 @@ Dir[File.join(File.dirname(__FILE__), "support/**/*.rb")].each {|f| require f }
 
 # Requires factories defined in spree_core
 require 'spree/core/testing_support/factories'
+require 'factories'
 
 RSpec.configure do |config|
   # == Mock Framework
@@ -24,7 +25,7 @@ RSpec.configure do |config|
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
+  
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.

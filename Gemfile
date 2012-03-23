@@ -10,3 +10,4 @@ end
 
 gemspec
 gem 'spree'
+gem 'ffaker'
